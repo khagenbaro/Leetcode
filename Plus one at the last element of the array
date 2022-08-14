@@ -1,0 +1,23 @@
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int len = digits.length;
+        len--;
+        while(len>=0){
+            digits[len]++;
+            if(len==0 && digits[0]==10){
+                int[] ans = new int[digits.length+1];
+                ans[0]=1;
+                return ans;
+            }
+            if(digits[len]==10){
+                digits[len--]=0;
+                continue;
+            }
+            else{
+                return digits;
+            }
+            
+        }
+        return digits;
+    }
+}
